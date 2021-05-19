@@ -4,6 +4,7 @@ import { Cat } from './models/models';
 export const resolvers = {
   Query: {
     hello: () => 'Hello world!',
+    getCats : () => Cat.find()
   },
   Mutation: {
     createCat: async (_parent, { name , age }) => {
